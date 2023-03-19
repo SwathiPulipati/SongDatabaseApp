@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".SongDetails">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/song_details_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Insert Song Name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/favorite_button"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <ImageButton
+                    android:id="@+id/favorite_button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/song_details_heading"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/song_details_heading"
+                    app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+                <TextView
+                    android:id="@+id/info_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Information"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/name_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/song_details_heading" />
+
+                <TextView
+                    android:id="@+id/name_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    app:layout_constraintBottom_toBottomOf="@+id/name_display"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/name_display" />
+
+                <TextView
+                    android:id="@+id/name_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/name_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/name_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/info_heading" />
+
+                <ImageButton
+                    android:id="@+id/name_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/name_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/name_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/ragam_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ragam: "
+                    app:layout_constraintBottom_toBottomOf="@+id/ragam_display"
+                    app:layout_constraintStart_toStartOf="@+id/name_heading"
+                    app:layout_constraintTop_toTopOf="@+id/ragam_display" />
+
+                <TextView
+                    android:id="@+id/ragam_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/ragam_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/ragam_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/name_display" />
+
+                <ImageButton
+                    android:id="@+id/ragam_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/ragam_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/ragam_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/talam_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Talam: "
+                    app:layout_constraintBottom_toBottomOf="@+id/talam_display"
+                    app:layout_constraintStart_toStartOf="@+id/ragam_heading"
+                    app:layout_constraintTop_toTopOf="@+id/talam_display" />
+
+                <TextView
+                    android:id="@+id/talam_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/talam_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/talam_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/ragam_display" />
+
+                <ImageButton
+                    android:id="@+id/talam_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/talam_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/talam_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/type_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type: "
+                    app:layout_constraintBottom_toBottomOf="@+id/type_display"
+                    app:layout_constraintStart_toStartOf="@+id/talam_heading"
+                    app:layout_constraintTop_toTopOf="@+id/type_display" />
+
+                <TextView
+                    android:id="@+id/type_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/type_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/type_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/talam_display" />
+
+                <ImageButton
+                    android:id="@+id/type_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/type_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/type_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/composer_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Composer: "
+                    app:layout_constraintBottom_toBottomOf="@+id/composer_display"
+                    app:layout_constraintStart_toStartOf="@+id/type_heading"
+                    app:layout_constraintTop_toTopOf="@+id/composer_display" />
+
+                <TextView
+                    android:id="@+id/composer_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/composer_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/composer_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/type_display" />
+
+                <ImageButton
+                    android:id="@+id/composer_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/composer_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/composer_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/year_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Years: "
+                    app:layout_constraintBottom_toBottomOf="@+id/year_display"
+                    app:layout_constraintStart_toStartOf="@+id/composer_heading"
+                    app:layout_constraintTop_toTopOf="@+id/year_display" />
+
+                <TextView
+                    android:id="@+id/year_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/year_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/year_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/composer_display" />
+
+                <ImageButton
+                    android:id="@+id/year_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/year_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/year_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/notes_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Notes: "
+                    app:layout_constraintBottom_toBottomOf="@+id/notes_display"
+                    app:layout_constraintStart_toStartOf="@+id/year_heading"
+                    app:layout_constraintTop_toTopOf="@+id/notes_display" />
+
+                <TextView
+                    android:id="@+id/notes_display"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:gravity="end"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@id/notes_edit_button"
+                    app:layout_constraintStart_toEndOf="@+id/notes_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/year_display" />
+
+                <ImageButton
+                    android:id="@+id/notes_edit_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/notes_display"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/notes_display"
+                    app:srcCompat="@drawable/ic_baseline_edit_white_15" />
+
+                <TextView
+                    android:id="@+id/files_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Files"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/notes_display" />
+
+                <TextView
+                    android:id="@+id/class_files_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class Files: "
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/class_files_display"
+                    app:layout_constraintStart_toStartOf="@+id/notes_heading"
+                    app:layout_constraintTop_toTopOf="@+id/class_files_display" />
+
+                <TextView
+                    android:id="@+id/class_files_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/class_files_heading"
+                    app:layout_constraintTop_toBottomOf="@id/files_heading" />
+
+                <Button
+                    android:id="@+id/add_more_class_files_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/remove_class_files_button"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/class_files_display" />
+
+                <Button
+                    android:id="@+id/remove_class_files_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Remove All"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/class_files_display" />
+
+
+                <TextView
+                    android:id="@+id/master_copy_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class Files: "
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/master_copy_display"
+                    app:layout_constraintStart_toStartOf="@+id/class_files_heading"
+                    app:layout_constraintTop_toTopOf="@+id/master_copy_display" />
+
+                <TextView
+                    android:id="@+id/master_copy_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/master_copy_heading"
+                    app:layout_constraintTop_toBottomOf="@id/remove_class_files_button" />
+
+
+                <Button
+                    android:id="@+id/replace_master_copy_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Replace"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toBottomOf="@id/master_copy_display" />
+
+                <Button
+                    android:id="@+id/fill_queue_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Add Files To Queue"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/replace_master_copy_button" />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

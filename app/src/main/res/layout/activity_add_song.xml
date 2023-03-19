@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".AddSongActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/text_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Add New Song to Database"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/info_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Information"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/name_input"
+                    app:layout_constraintEnd_toEndOf="@+id/text_heading"
+                    app:layout_constraintStart_toStartOf="@+id/text_heading"
+                    app:layout_constraintTop_toBottomOf="@id/text_heading" />
+
+                <TextView
+                    android:id="@+id/name_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name: "
+                    app:layout_constraintBottom_toBottomOf="@+id/name_input"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/name_input" />
+
+                <EditText
+                    android:id="@+id/name_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Song Name"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/name_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/info_heading" />
+
+                <TextView
+                    android:id="@+id/ragam_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ragam: "
+                    app:layout_constraintBottom_toBottomOf="@+id/ragam_input"
+                    app:layout_constraintStart_toStartOf="@+id/name_heading"
+                    app:layout_constraintTop_toTopOf="@+id/ragam_input" />
+
+                <EditText
+                    android:id="@+id/ragam_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Ragam Name"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ragam_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/name_input" />
+
+                <TextView
+                    android:id="@+id/talam_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Talam: "
+                    app:layout_constraintBottom_toBottomOf="@+id/talam_input"
+                    app:layout_constraintStart_toStartOf="@+id/ragam_heading"
+                    app:layout_constraintTop_toTopOf="@+id/talam_input" />
+
+                <EditText
+                    android:id="@+id/talam_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Talam"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/talam_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/ragam_input" />
+
+                <TextView
+                    android:id="@+id/type_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type: "
+                    app:layout_constraintBottom_toBottomOf="@+id/type_input"
+                    app:layout_constraintStart_toStartOf="@+id/talam_heading"
+                    app:layout_constraintTop_toTopOf="@+id/type_input" />
+
+                <EditText
+                    android:id="@+id/type_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Composition Type"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/type_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/talam_input" />
+
+                <TextView
+                    android:id="@+id/composer_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Composer: "
+                    app:layout_constraintBottom_toBottomOf="@+id/composer_input"
+                    app:layout_constraintStart_toStartOf="@+id/type_heading"
+                    app:layout_constraintTop_toTopOf="@+id/composer_input" />
+
+                <EditText
+                    android:id="@+id/composer_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Composer Name"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/composer_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/type_input" />
+
+                <TextView
+                    android:id="@+id/year_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Years: "
+                    app:layout_constraintBottom_toBottomOf="@+id/year_input"
+                    app:layout_constraintStart_toStartOf="@+id/composer_heading"
+                    app:layout_constraintTop_toTopOf="@+id/year_input" />
+
+                <EditText
+                    android:id="@+id/year_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Year Range"
+                    android:inputType="textPersonName"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/year_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/composer_input" />
+
+                <TextView
+                    android:id="@+id/notes_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Notes: "
+                    app:layout_constraintBottom_toBottomOf="@+id/notes_input"
+                    app:layout_constraintStart_toStartOf="@+id/year_heading"
+                    app:layout_constraintTop_toTopOf="@+id/notes_input" />
+
+                <EditText
+                    android:id="@+id/notes_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Insert Additional Notes"
+                    android:inputType="textMultiLine"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/notes_heading"
+                    app:layout_constraintTop_toBottomOf="@+id/year_input" />
+
+                <TextView
+                    android:id="@+id/files_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="Files"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/notes_input" />
+
+                <TextView
+                    android:id="@+id/class_files_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class Files: "
+                    app:layout_constraintBottom_toBottomOf="@+id/add_class_files_button"
+                    app:layout_constraintStart_toStartOf="@+id/notes_heading"
+                    app:layout_constraintTop_toTopOf="@+id/add_class_files_button" />
+
+                <Button
+                    android:id="@+id/add_class_files_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Add Class Recordings"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/class_files_heading"
+                    app:layout_constraintTop_toBottomOf="@id/files_heading" />
+
+                <TextView
+                    android:id="@+id/master_copy_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Master Copy: "
+                    app:layout_constraintBottom_toBottomOf="@+id/add_master_copy_button"
+                    app:layout_constraintStart_toStartOf="@+id/class_files_heading"
+                    app:layout_constraintTop_toTopOf="@+id/add_master_copy_button" />
+
+                <Button
+                    android:id="@+id/add_master_copy_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Add Master Copy"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@id/master_copy_heading"
+                    app:layout_constraintTop_toBottomOf="@id/add_class_files_button" />
+
+                <Button
+                    android:id="@+id/submit_song_data_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Submit Song Info and Files"
+                    android:textAllCaps="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/add_master_copy_button" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

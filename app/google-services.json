@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1085197587871",
+    "project_id": "finalprojecttake2",
+    "storage_bucket": "finalprojecttake2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085197587871:android:d468a67fcc4b4f166f59aa",
+        "android_client_info": {
+          "package_name": "com.example.finalprojecttake2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1085197587871-hf4hpemplgffib9bkrkg1m8ot09he5ai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtst-V8urYdYjqcf7wkNF-b2LA41iS5pc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1085197587871-hf4hpemplgffib9bkrkg1m8ot09he5ai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
